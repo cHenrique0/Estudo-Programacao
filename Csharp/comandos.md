@@ -4,7 +4,7 @@
 
 &nbsp;
 
-Comando | Centralizado
+Comando | Ação
  :------: | :------: 
 dotnet --version | Mostra a versão do SDK do .NET instalado
 dotnet --list-sdks | Mostra todas as SDKs instaladas
