@@ -32,3 +32,22 @@ figcaption {
     margin-top: 10px;
 }
 
+figure img {
+    width:  100%;   /* faz as imagens ocuparem 100% do espaço dentro da tag figure */
+}
+
+/* estilizando usando o atributo class das tags */
+.img-matriz {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-familia {
+    width: 275px;
+    float: right    /* desloca para a direita */
+}
+
+
+
+
