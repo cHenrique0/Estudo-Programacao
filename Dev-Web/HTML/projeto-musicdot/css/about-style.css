@@ -49,6 +49,39 @@ figure img {
     float: right    /* desloca para a direita */
 }
 
+/* Usando o padrão BEMCSS para nomear classes */
 
+.contact__subtitle {
+    display: inline;
+    /* 
+    Permite que outro elemento fique do seu lado caso haja espaço
+    O elemento ocupa apenas o espaço para mostrar seu conteudo
+    Não recebe a propriedade width
+    */
+}
+
+.contact-section {
+    display: inline-block; /* Muda apenas uma coisa em relação ao 'inline': recebe propriedades de tamanho */
+    vertical-align: top;   /* alinhamento vertical para deixar todo o conteúdo no topo*/
+    margin-left: 16px;
+}
+
+.contact-section--phone {
+    margin-left: 32px;
+}
+
+.contact__info {
+    margin: 16px 0 24px;
+    padding-left: 32px;
+}
+
+.contact__info-title {  /* para deixar o titulo lado a lado com a descrição */
+    display: inline;
+}
+
+.contact__info-desc {   /* para deixar o titulo lado a lado com a descrição */
+    display: inline;
+    margin-left: 10px;
+}
 
 
