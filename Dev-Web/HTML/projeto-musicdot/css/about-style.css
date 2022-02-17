@@ -60,13 +60,13 @@ figure img {
     */
 }
 
-.contact-section {
+.contact__section {
     display: inline-block; /* Muda apenas uma coisa em relação ao 'inline': recebe propriedades de tamanho */
     vertical-align: top;   /* alinhamento vertical para deixar todo o conteúdo no topo*/
     margin-left: 16px;
 }
 
-.contact-section--phone {
+.contact__section--phone {
     margin-left: 32px;
 }
 
