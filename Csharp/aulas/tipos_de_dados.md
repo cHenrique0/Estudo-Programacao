@@ -10,6 +10,7 @@
 **OBS:** signed(valores com sinal) e unsigned(valores sem sinal)
 
 - Definições:
+
 Tipo | Bits | Capacidade
  :------: | :------: | :------:
 byte | 8-bit | 0 a 255
@@ -32,6 +33,7 @@ sbyte mySByte = -50;
 - O tipo `int` é o mais comum;
 
 - Definições:
+
 Tipo | Bits | Capacidade
  :------: | :------: | :------:
 short | 16-bit | -32 768 a 32 767
@@ -58,6 +60,7 @@ ulong numero = 1255235325;
 - Possuvem assimilação negativa e positiva por padrão, dispensando o uso do signed/unsigned em seus tipos;
 
 - Definições:
+
 Tipo | Bits | Capacidade
  :------: | :------: | :------:
 float | 32-bit | -3.402823<sup>38</sup> a 3.402823<sup>38</sup>
