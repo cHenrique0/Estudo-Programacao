@@ -30,3 +30,5 @@
   - ...
 
 - A maioria dos sites da web é feita com JavaScript
+
+**[MDN JavaScript Doc](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
