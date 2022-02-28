@@ -15,6 +15,9 @@
 - É uma lingaguem **interpretada**, ou seja, não depende de _compilação_ para ser executado;
   - O código é _interpretado_ e executado conforme é lido pelo navegador, linha a linha;
 - Possui **grande tolerância a erros**, pois há conversões automáticas durante a execução e isso pode ser ruim casa não conheçamos bem esse mecanismo;
+- É uma linguagem **fracamente tipada** e dinamica;
+  - As variáveis não precisam ter um tipo previamente definido como em linguagens comp `C`, `C++`, `Java` entre outras;
+  - Com isso, podemos mudar o valor da variável a qualquer momento;
 - O script é enviado com o **HTML** para o navegador;
   - Isso é feito usando a tag `<script>` do HTML;
 
