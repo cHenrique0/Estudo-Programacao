@@ -9,6 +9,7 @@
 
 ## Características
 
+- Linguagem orientada a objetos e multiplataforma
 - Como o próprio nome indica, é uma linguagem de _scripting_;
   - Definida como uma linguagem de programação que permite ao programador controlar uma ou mais aplicações de terceiros;
   - Com o Javascript, podemos controlar alguns comportamentos dos navegadores;
