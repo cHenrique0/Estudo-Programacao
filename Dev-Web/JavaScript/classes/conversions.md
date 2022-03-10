@@ -70,6 +70,10 @@ console.log(typeof str);    // string
 ```
 #### 2.1.2. Number
 ##### a. toFixed
+
+exemplo: //imprime em formato de moeda, no caso, Real Brasileiro
+let salario = 1545.5
+console.log(salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
 ##### b. toExponential
 ##### c. toPrecision
 
