@@ -1,4 +1,5 @@
 
 support-resources/
-*.txt
+Csharp/*.txt
 .vscode/
+*.pdf
