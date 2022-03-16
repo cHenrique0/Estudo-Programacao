@@ -1,4 +1,4 @@
-# Seção 7 - Colections
+# Collections
 #
 # O python possui alguns tipos de coleções:
 # i.    Listas
@@ -12,10 +12,10 @@
     # Tuplas são parecidas com lista.
     # Existem duas diferenças básicas:
         # As tuplas são representadas por parenteses ()
-        # As tuplas são imutaveis, isso significa que não podemos fazer alterações na tupla.
+        # As tuplas são imutáveis, isso significa que não podemos fazer alterações na tupla.
     # Toda operação em uma tupla gera uma nova tupla.
     # As tuplas são DEFINIDAS pela virgula e não pelo uso do parenteses.
-    # As tuplas possuem os mesmo metodos das lista, com exceção do metodos que causam alterações,
+    # As tuplas possuem os mesmo metodos das lista, com exceção dos métodos que causam alterações,
     # pois elas são imutaveis.
     # Quando usar tuplas?
         #
@@ -44,6 +44,7 @@ tupla5 = 4,
 print(tupla5)
 print(type(tupla5))
 """
+
 # Gerando uma tupla com range()
 """
 tupla = tuple(range(11))
@@ -54,10 +55,10 @@ print(type(tupla))
 # Desempacotamento de tupla
     # O desempacotamento de tupla acontence da mesma forma que na lista.
 """
-tupla = ("Geek University", "Programação em Python: Essencial")
-escola, curso = tupla
-print(escola)
-print(curso)
+tupla = (2, 3)
+num_1, num_2 = tupla
+print(num_1)
+print(num_2)
 """
 
 # Concatenando tuplas

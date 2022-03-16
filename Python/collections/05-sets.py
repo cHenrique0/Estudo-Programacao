@@ -1,4 +1,4 @@
-# Seção 7 - Colections
+# Collections
 #
 # O python possui alguns tipos de coleções:
 # i.    Listas
@@ -11,20 +11,19 @@
 #
 # Os conjuntos são referenciados por {}. Porém são diferentes dos dicionarios.
 #
-# Obs: Quando se fala de conjuntos, em qualquer linguagem de programação, estamos fazendo referencia
-# a Teoria dos Conjuntos da Matemática.
+# Obs: Quando se fala de conjuntos, em qualquer linguagem de programação, 
+# estamos fazendo referência à Teoria dos Conjuntos da Matemática.
 #
 # No Python, os conjuntos são chamados de Sets.
-# Os sets(conjuntos) não possuem valores duplicados;
-# Os sets não possuem valores ordenados;
-# Os elementos de um set não são acessados via indices, ou seja, os conjuntos não são indexados.
+# Os sets não possuem valores duplicados nem ordenados.
+# Os elementos de um set não são acessados via indices, ou seja, não são indexados.
 #
 # Usa-se conjuntos para armazenar elementos não levando em consideração a ordem deles.
 
 
 # Diferenças entre sets e dicionarios (python):
     #
-    # Dicionarios possuem chave/valor, conjuntos possuem apenas valor
+    # Dicionarios possuem chave-valor, conjuntos possuem apenas valor
     # 
 
 # Definindo um conjunto(set):
@@ -35,6 +34,7 @@ s = set({1, 2, 3, 4, 5, 5, 6, 7, 2, 3}) # O conjunto possui dados repetidos
 print(s)                                # Mas as repetições não são adicionadas ao set
 print(type(s))                          # Tipo de dado retornado: <class set>
 """
+
     # FORMA 2 (mais comum):
 """
 s = {1, 2, 3, 4, 5, 5} # Lembrando que os elementos repetidos são ignorados
@@ -43,14 +43,20 @@ print(type(s))
 """
 
 # Convertendo sets:
+    #
+    # a. String -> Set
 """
-s = set("Geek University")  # String > Set
+s = set("Some text")
 print(s)
-
-l = set([1, 2, 3, 4, 5, 6, 7, 4, 3, 2]) # Lista > Set
+"""
+    # b. List -> Set
+"""
+l = set([1, 2, 3, 4, 5, 6, 7, 4, 3, 2])
 print(l)
-
-t = set((1, 3, 4, 3, 6, 7)) # Tupla > Set
+"""
+    # c. Tuple -> Set
+"""
+t = set((1, 3, 4, 3, 6, 7))
 print(t)
 """
 
@@ -78,7 +84,7 @@ for valor in s:
 
 # Adicionando elementos ao conjunto:
     #
-    # conjunto.add(elemento) > adiciona o elemento ao conjunto
+    # set.add(item) -> adiciona item ao set
 """
 s = {1, 2, 3}
 print(f"Antes de add: {s}")
@@ -89,8 +95,8 @@ print(f"Depois de add: {s}")
 # Removendo elementos do conjunto:
     #
     # FORMA 1 - remove():
-        # conjunto.remove(elemento) > remove o elemento do conjunto.
-        # OBS: não confundir 'elemento' com o indice, pois os conjuntos
+        # set.remove(item) -> remove item do set.
+        # OBS: não confundir 'item' com o indice, pois os conjuntos
         #      não são indexados.
 """
 s = {1, 2, 3}
@@ -99,7 +105,7 @@ s.remove(3)
 print(f"Depois de remover: {s}")
 """
     # FORMA 2 - discard():
-        #conjunto.discard(elemento) > remove o elemento do conjunto.
+        # set.discard(item) -> remove item do set.
 """
 s = {1, 2, 3}
 print(f"Antes de remover: {s}")
@@ -110,9 +116,9 @@ print(f"Depois de remover: {s}")
 # Copiando um conjunto:
     #
     # FORMA 1 - Deep Copy:
-        # novo = conjunto.copy() > Copia o conjunto para uma nova variavel
-        # OBS: os conjuntos são independentes. Então, uma alteração no 'novo'
-        # não altera o 'conjunto'.
+        # new_set = set.copy() -> Copia o conjunto para uma nova variavel
+        # OBS: os conjuntos são independentes. Então, uma alteração em 'new_set'
+        # não altera 'set'.
 """
 s = {1, 2, 3}
 novo = s.copy()
@@ -121,9 +127,9 @@ print(f"S = {s}")
 print(f"Novo = {novo}")
 """
     # FORMA 2 - Shallow Copy:
-        # novo = conjunto > copia o conjunto para uma nova variavel
+        # new_set = set -> copia o conjunto para uma nova variavel
         # OBS: os conjuntos são exatamente os mesmos conjuntos. Então, uma alteração
-        # no 'novo' ALTERA o 'conjunto'.
+        # em 'new_set' ALTERA 'set'.
 """
 s = {1, 2, 3}
 novo = s
@@ -134,7 +140,7 @@ print(f"Novo = {novo}")
 
 # Removendo todos os elementos do conjunto:
     #
-    # conjunto.clear() > limpa o conjunto, deixando-o vazio
+    # set.clear() -> limpa o conjunto, deixando-o vazio
 """
 s = {1, 2, 3}
 print(f"Antes de limpar: {s}")
@@ -146,7 +152,7 @@ print(f"Depois de limpar: {s}")
     #
     # 1. UNIÃO:
         # FORMA 1 - union():
-            # novo = conjunto1.union(conjunto2) > Une dois conjuntos num só set
+            # new_set = set_1.union(set_2) -> Une dois conjuntos num unico set
 
 """
 conjunto_1 = {"Marcos", "Patricia", "Ellen", "Pedro", "Julia", "Guilherme"}
@@ -199,7 +205,7 @@ print(f"Só no conjunto 2 = {only_conj2}")
 """
 
 # Soma*, Valor máximo*, valor minimo*, tamanho:
-    # * > Se os valores forem inteiros ou reais
+    # * -> Se os valores forem inteiros ou reais
 """
 s = {1, 2, 3, 4, 5}
 print(f"Soma: {sum(s)}")

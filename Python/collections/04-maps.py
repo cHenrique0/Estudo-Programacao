@@ -1,4 +1,4 @@
-# Seção 7 - Colections
+# Collections
 #
 # O python possui alguns tipos de coleções:
 # i.    Listas
