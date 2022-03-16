@@ -2,7 +2,7 @@
 # Funções com parametro padrão (default parameters)
     #
     # Neste tipo de função a passagem de parametros é opcional
-    # Os parametros com valores default(padrão) devem sempre estar ao final da declaração da função.
+    # Os parâmetros com valores default(padrão) devem sempre estar ao final da declaração da função.
 #
 #
 """

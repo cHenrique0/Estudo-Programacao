@@ -1,4 +1,0 @@
-#
-# Entendo o *args:
-    #
-    # 

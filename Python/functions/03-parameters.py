@@ -5,6 +5,7 @@
     # As funções podem ter n parametros de entrada, ou seja, pode-se receber
     # quantos paremetros forem necessarios.
     # Os parametros são separados por virgula.
+    # Parametros são informações de que uma função precisa para executar sua tarefa.
     #
 #
 # Exemplos:
