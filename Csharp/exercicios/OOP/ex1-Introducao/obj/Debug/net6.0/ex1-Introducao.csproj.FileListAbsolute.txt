@@ -1,0 +1,15 @@
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/bin/Debug/net6.0/ex1-Introducao
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/bin/Debug/net6.0/ex1-Introducao.deps.json
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/bin/Debug/net6.0/ex1-Introducao.runtimeconfig.json
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/bin/Debug/net6.0/ex1-Introducao.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/bin/Debug/net6.0/ex1-Introducao.pdb
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.csproj.AssemblyReference.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.GeneratedMSBuildEditorConfig.editorconfig
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.AssemblyInfoInputs.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.AssemblyInfo.cs
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.csproj.CoreCompileInputs.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/refint/ex1-Introducao.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.pdb
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ex1-Introducao.genruntimeconfig.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/OOP/ex1-Introducao/obj/Debug/net6.0/ref/ex1-Introducao.dll
