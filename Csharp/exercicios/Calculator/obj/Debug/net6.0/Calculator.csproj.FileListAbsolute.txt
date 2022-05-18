@@ -1,0 +1,15 @@
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/bin/Debug/net6.0/Calculator
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/bin/Debug/net6.0/Calculator.deps.json
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/bin/Debug/net6.0/Calculator.runtimeconfig.json
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/bin/Debug/net6.0/Calculator.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/bin/Debug/net6.0/Calculator.pdb
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.csproj.AssemblyReference.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfoInputs.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfo.cs
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.csproj.CoreCompileInputs.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/refint/Calculator.dll
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.pdb
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/Calculator.genruntimeconfig.cache
+/home/chenrique/Development/Estudo/Estudo-Programacao/Csharp/exercicios/Calculator/obj/Debug/net6.0/ref/Calculator.dll
