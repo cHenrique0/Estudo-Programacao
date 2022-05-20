@@ -131,8 +131,8 @@ Console.WriteLine(textArray[1]);
 ```
 ### 7. Substring
 Recebe 2 parametros:
-    - o primeiro é o indice
-    - o segundo é quantidade de caracteres.
+- o primeiro é o indice
+- o segundo é quantidade de caracteres.
 ```c#
 string text = "Some text";
 string subText = text.Substring(5, 4);

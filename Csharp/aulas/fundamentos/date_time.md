@@ -42,14 +42,14 @@ Console.WriteLine(date);
 
 Usando `String.Format` podemos formatas uma data.
 Algumas opções:
-    - yyyy: ano
-    - MM: mês
-    - dd: dia
-    - hh: hora
-    - mm: minutos
-    - ss: segundos
-    - ff: frações de segundo
-    - z: timezone(fuso)
+- yyyy: ano
+- MM: mês
+- dd: dia
+- hh: hora
+- mm: minutos
+- ss: segundos
+- ff: frações de segundo
+- z: timezone(fuso)
 ```c#
 DateTime date = DateTime.Now;
 Console.WriteLine("{0:yyyy}", date);
