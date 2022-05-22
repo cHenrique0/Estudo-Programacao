@@ -2,7 +2,7 @@
 
 Para representar um *"objeto"* do mundo real, usamos as **classes**.  
 Uma classe é um tipo de dado em C#. Como estrutura, uma classe define os dados e o comportamento dos tipos de dados.  
----
+
 ## 1. Definindo uma classe
 Uma classe em C# é definida usando a palavra reservada `class`.  
 Por convenção, o código da classe deve ficar dentro de um arquivo com o **mesmo** nome da classe. (Se um classe for nomeada como `Aluno`, então o nome do arquivo será `Aluno.cs`).
@@ -21,7 +21,7 @@ class Program {
     }
 }
 ```
----
+
 ## 2. Membros da classe
 ### 2.1. Atributos
 Dentro de uma classe queremos armazenar informações que descrevem o **objeto**.  
@@ -157,7 +157,7 @@ class Pessoa
 ```
 Propriedades de somente leitura podem implementar o acessador `get` como uma expressão. Nesse caso, nem a o acessador `get` nem a palavra-chave `return` é usada.
 O exemplo acima implementa a propriedade `Nome` como somente leitura e usando uma expressão.
----
+
 ## 3. Sobrecarga
 ### 3.1 Sobrecarga de construtores
 É um recurso que uma classe possui para oferecer mais de uma operação com o mesmo nome, porém com diferentes listas de parâmetros.  
@@ -220,7 +220,7 @@ class Program {
     }
 }
 ```
----
+
 ## 4. Palavra `this`
 É uma referência para o **próprio** objeto.  
 Usos comuns:
@@ -251,7 +251,7 @@ class Produto {
     }
 }
 ```
----
+
 ## 5. Modificadores de acesso
 
 Tabela de resumo:
@@ -266,7 +266,7 @@ Tabela de resumo:
 `private protected` | x | x | &nbsp; | &nbsp; | &nbsp;
 
 ** assembly é o projeto
----
+
 ## Ordem sugeridade para implementação de membros da classe
 
 1. Atributos privados
