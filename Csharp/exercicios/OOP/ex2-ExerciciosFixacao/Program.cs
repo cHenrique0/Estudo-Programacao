@@ -1,4 +1,5 @@
-﻿
+﻿#nullable disable
+
 namespace ex2_ExerciciosFixacao
 {
     class Program

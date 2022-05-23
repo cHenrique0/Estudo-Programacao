@@ -1,4 +1,5 @@
-﻿
+﻿#nullable disable
+
 namespace ex1_Introducao {
     class Program {
         static void Main(string[] args) {

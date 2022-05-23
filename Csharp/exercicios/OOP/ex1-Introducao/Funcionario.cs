@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+#nullable disable
 
 namespace ex1_Introducao
 {
     public class Funcionario
     {
-        public string Nome = null;
+        public string Nome;
         public double Salario = 0.0;
     }
 }
