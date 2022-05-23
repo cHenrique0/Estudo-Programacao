@@ -71,3 +71,16 @@ Console.WriteLine("{0:r}", date);   // Thu, 19 May 2022 22:08:01 GMT
 Console.WriteLine("{0:s}", date);   // 2022-05-19T22:11:26
 Console.WriteLine("{0:u}", date);   // 2022-05-19 22:12:05Z
 ```
+---
+## Adicionando valores
+```c#
+DateTime date = DateTime.Now;
+Console.WriteLine(date);
+// Incrementa dias na data, mudando o mês e o ano automaticamente, caso necessário
+Console.WriteLine(date.AddDays(10));
+Console.WriteLine(date.AddMonths(2));
+// Podemos passar numeros negativos como parametro
+Console.WriteLine(date.AddYears(-2));
+```
+---
+
