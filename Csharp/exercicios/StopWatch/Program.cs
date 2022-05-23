@@ -1,4 +1,5 @@
-﻿
+﻿#nullable disable
+
 namespace StopWatch {
 
     class Program {
@@ -32,7 +33,7 @@ namespace StopWatch {
             int multiplier = 1;
             
             // Entrada do usuario
-            string? dataInput = Console.ReadLine().ToLower();
+            string dataInput = Console.ReadLine().ToLower();
             
             // Separando a opção s ou m
             option = char.Parse(dataInput.Substring(dataInput.Length-1, 1));
