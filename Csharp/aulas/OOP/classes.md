@@ -254,6 +254,19 @@ class Produto {
 
 ## 5. Modificadores de acesso
 
+Todos os tipos e membros de tipos possuem um nível de acessibilidade. Este nivel controla se eles podem ser usados em outro código do assembly<sup>[[1]](#nota1)</sup> ou em outros assemblies diferentes.  
+Para especificar a acessibilidade de um tipo ou membro podemos usar os seguintes modificadores:
+- `public`: o tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou outro assembly que faça referência a ele. O nível de acessibilidade de membros públicos de um tipo é controlado pelo nível de acessibilidade do próprio tipo.
+- `private`: o tipo ou membro só pode ser acessado por código na mesma `class`ou `struct`
+- `protected`: o tipo ou membro só pode ser acessado por código na mesma `class` ou em uma `class` derivada.
+- `internal`: o tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não por outro assembly. Ou seja, tipos ou membros `internal` podem ser acessados no código que faz parte da mesma compilação.
+- `protected internal`: o tipo ou membro pode ser acessado por qualquer código no assembly no qual ele é declarado.
+- `private protected`: o tipo ou membro pode ser acessado por tipos derivados da `class` que são declarados dentro do assembly que a contém.
+
+<a name="nota1">[1]</a>: um assembly é um `.dll` ou `.exe` criado pela compilação de um ou mais arquivos `.cs` numa única compilação.
+
+> Saiba mais: [Microsoft Docs C# - Access Modifiers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
+
 Tabela de resumo:
 
 &nbsp;   | Própria classe | subclasse no assembly | classes do assembly | subclasses fora do assembly | classes fora do assembly
@@ -265,7 +278,6 @@ Tabela de resumo:
 `protected internal` | x | x | x | x | &nbsp;
 `private protected` | x | x | &nbsp; | &nbsp; | &nbsp;
 
-** assembly é o projeto
 
 ## Ordem sugeridade para implementação de membros da classe
 
