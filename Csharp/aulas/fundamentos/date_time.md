@@ -34,9 +34,31 @@ Console.WriteLine(date.DayOfYear);  // 237
 ```
 ### 4. Data e hora atuais
 ```c#
-DateTime date = DateTime.Now;
-Console.WriteLine(date);
+DateTime date1 = DateTime.Now;  // data e hora atuais
+Console.WriteLine(date1);
+
+DateTime date2 = DateTime.Today; // apenas a data atua, e horas zeradas
+Console.WriteLine(date2);
 ```
+
+### 5. `DateTime.Parse`
+```c#
+DateTime d1 = DateTime.Parse("2000-08-15");
+DateTime d2 = DateTime.Parse("2000-08-15 13:08:56");
+
+Console.WriteLine(d1);
+Console.WriteLine(d2);
+```
+
+### 6. `DateTime.ParseExact`
+```c#
+DateTime d1 = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+DateTime d2 = DateTime.ParseExact("15/08/2000", "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+Console.WriteLine(d1);
+Console.WriteLine(d2);
+```
+
 ---
 ## Formatando Datas
 
