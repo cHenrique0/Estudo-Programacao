@@ -104,5 +104,15 @@ Console.WriteLine(date.AddMonths(2));
 // Podemos passar numeros negativos como parametro
 Console.WriteLine(date.AddYears(-2));
 ```
+
+## Diferença entre datas
+```c#
+DateTime inicio = new DateTime(2000, 10, 15);
+DateTime fim = new DateTime(2000, 10, 18);
+
+TimeSpan diferenca = fim.Subtract(inicio);
+
+Console.WriteLine(diferenca);  // 3.00:00:00 - diferença de 3 dias
+```
 ---
 
