@@ -21,6 +21,9 @@
   - Com isso, podemos mudar o valor da variável a qualquer momento;
 - O script é enviado com o **HTML** para o navegador;
   - Isso é feito usando a tag `<script>` do HTML;
+- Multiparadigma
+  - Programação Orientada à Objetos, Programação Funcional, Programação Estruturada
+- Segue o padrão **ECMAScript**;
 
 ## O que pode ser feito?
 
