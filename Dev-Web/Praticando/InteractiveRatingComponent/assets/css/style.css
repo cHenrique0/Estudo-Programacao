@@ -24,7 +24,7 @@ p {
   color: hsl(217, 12%, 63%);
 }
 
-.rating-component {
+.card {
   display: flex;
   flex-direction: column;
   max-width: 400px;
@@ -74,6 +74,11 @@ p {
   color: hsl(0, 0%, 100%);
 }
 
+#rating-form {
+  display: flex;
+  flex-direction: column;
+}
+
 button#submit {
   color: hsl(0, 0%, 100%);
   background: hsl(25, 97%, 53%);
@@ -91,4 +96,40 @@ button#submit:hover {
   color: hsl(25, 97%, 53%);
   background: hsl(0, 0%, 100%);
   transition: 0.3s;
+}
+
+button#submit:focus {
+  outline-style: none;
+}
+
+.thanks-img {
+  align-self: center;
+  margin: 20px;
+}
+
+.rating-choice {
+  align-self: center;
+  color: hsl(25, 97%, 53%);
+  font-size: 18px;
+  font-weight: 400;
+  background: hsla(217, 12%, 63%, 0.2);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#thanks-card h1 {
+  text-align: center;
+  margin: 15px;
+}
+
+#thanks-card p {
+  text-align: center;
+}
+
+.card#thanks-card {
+  display: none;
+  margin: 90px auto;
 }
