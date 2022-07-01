@@ -73,7 +73,114 @@ let r = new RegExp("js");   // cria um objeto RegExp para comparação de padrõ
 Além de construtores internos, podemos definir nossas próprias funções construtoras.
 
 ### 1.3 `Object.create()`
-
+É uma função estática e não um método chamado em objetos individuais. Para usa-lá basta passar o objeto protótipo desejado:
+```js
+const o1 = Object.create({ x: 1, y: 2 }); // o1 herda as propriedades x e y
+```
+Pode-se passar `null` para criar um novo objeto que não tem protóripo, então o objeto não vai herdar nada(nem mesmo metódos básicos):
+```js
+const o2 = Object.create(null); // o2 não herda propriedades nem métodos
+```
+Para criar um objeto vazio, pode-se passar `Object.prototype`:
+```js
+const o3 = Object.create(Object.prototype); // o3 é como {} ou new Object()
+```
 
 ## 2. Consultando e configurando propriedades
 
+Para obter o valor de uma propriedade podemos usar os operadores:
+1. `.`(ponto): `obj.prop`
+2. `[]`(colchetes): `obj["prop"]`
+
+Para criar ou configurar uma propriedade basta fazer uma atribuição àquela propriedade.
+
+```js
+let book = {
+    "main title": "JavaScript",
+    'sub-title': "The definitive guide",
+    "for": "all audiences",
+    author: {
+        firstname: "David",
+        surname: "Flanagan"
+    }
+}
+// consultado uma propriedade
+book["main title"];     // "JavaScript"
+book.author;            // retorna o objeto "author"
+book.author.surname;    // "Flanagan"
+
+// configurando ou criando uma propriedade
+book.edition = 6;                   // criar a propriedade "edition"
+bool["main title"] = "ECMAScript";  // altera o valor da propriedade "main title"
+```
+
+## 3. Excluindo propriedades
+O operador `delete` remove uma proprieade de um objeto. Seu operando deve ser uma expressão de acesso à uma propriedade.
+```js
+const person = {
+    firstname: "John",
+    surname: "Silver",
+    email: "jonh@silver.com"
+};
+
+delete person.email;
+delete person.surname;
+
+// agora person só possui a propriedade "firstname"
+```
+`delete` exclui apenas as propriedades **próprias**, não as herdadas(ver o topico #4 sobre Herança).
+
+## 4. Herança
+
+## 5. Testando propriedades
+Objetos  em JavaScript podem ser considerados conjuntos de propriedades. É util verificar se um objeto tem uma propriedade com determinado nome. Isso é feito com o operador `in`, com os métodos `hasOwnProperty()` e `propertyIsEnumerable()` ou apenas consultado a propriedade.
+
+1. O operador `in` esperar um nome de propriedade como string à esquerda e um objeto à direita e retorna `true` se o objeto possui a proprieadade(própria ou herdada).
+```js
+const o = { x: 1 }
+"x" in o;           // true
+"y" in o;           // false
+"toString" in o;    // true: tem uma propriedade herdada toString
+```
+2. O método `hasOwnProperty()` testa se o objeto tem uma propriedade **própria**. Retorna `true` se tiver a propriedade passada. Se essa propriedade for herdada, retorna `false`:
+```js
+const o = { x: 1 }
+o.hasOwnProperty("x");          // true: propriedade propria
+o.hasOwnProperty("y");          // false
+o.hasOwnProperty("toString");   // false: propriedade herdada
+```
+3. o método `propertyIsEnumerable()`
+```js
+```
+4. Verificando se um objeto tem uma determinada propriedade apenas consultado:
+```js
+const o = { x: 1}
+o.x !== undefined;          // true
+o.y !== undefined;          // false
+o.toString !== undefined;   // true
+```
+
+## 6. getter e setter de propriedadas
+Propriedades definidas por métodos _getter_ e _setter_ são conhecidadas como **propriedades de acesso**.  
+Um propriedade pode ser:
+- leitura/gravação: possui ambos os métodos _getter_ e _setter_.
+- somente de leitura: tem somente o método _getter_.
+- somente de gravação: tem somente o método _setter_ e as tentativas de lê-la são sempre avaliadas como `undefined`.
+A maneira mais fácil de definir propriedades de acesso é com uma extensão da sintaxe de objeto literal:
+```js
+const obj = {
+    // propriedade de dados normal
+    dataProp: value,
+
+    // propriedade de acesso
+    get acessorProp() {
+        // escopo da função
+    },
+    set acessorProp() {
+        // escopo da função
+    }
+}
+```
+
+## 7. Atributos de propriedade
+CONTINUAR NA PAGINA 128
