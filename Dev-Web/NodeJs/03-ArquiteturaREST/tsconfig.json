@@ -2,19 +2,20 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "ES2022",       // Versão que o TypeScript será transpilado
+    "target": "ES2022", // Versão que o TypeScript será transpilado
 
     /* Modules */
     "module": "commonjs",
-    "rootDir": "src",         // diretorio onde estão os scripts
+    "rootDir": "./src", // diretorio onde estão os scripts
     "moduleResolution": "node",
-    "typeRoots": [            // diretorios dos arquivos de definição do typescript
+    "typeRoots": [
+      // diretorios dos arquivos de definição do typescript
       "./src/@types",
       "./node_modules/@types"
     ],
 
     /* Emit */
-    "outDir": "./dist",       // onde fica o codigo transpilado
+    "outDir": "./dist", // onde fica o codigo transpilado
     "removeComments": true,
 
     /* Interop Constraints */
