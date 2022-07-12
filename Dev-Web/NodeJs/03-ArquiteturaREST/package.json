@@ -1,0 +1,17 @@
+{
+  "name": "ms-authentication-api",
+  "version": "1.0.0",
+  "description": "Microservice de autenticação para praticar a criação de APIs",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./",
+    "build": "tsc -p ."
+  },
+  "author": "Claudio Henrique",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "typescript": "^4.7.4"
+  }
+}
