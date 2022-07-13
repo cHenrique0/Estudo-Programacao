@@ -1,11 +1,8 @@
 // Importando o express
 import express from "express";
-// Importando alguns tipos do express
-import { Request, Response, NextFunction } from "express";
-// importando constantes do status code
-import { StatusCodes } from "http-status-codes";
-// importando as rotas do usuário
+// importando as rotas
 import usersRoute from "./routes/users.route";
+import statusRoute from "./routes/status.route";
 
 // criando uma instância do express
 const app = express();
@@ -18,16 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 /* Configurações de rotas */
 app.use(usersRoute); // rotas do usuário
-
-// definindo uma rota experimental para testar o funcionamento
-app.get(
-  "/status",
-  (request: Request, response: Response, next: NextFunction) => {
-    response.status(StatusCodes.OK).send({
-      msg: "A GET request to test",
-    });
-  }
-);
+app.use(statusRoute); // rotas de status do servidor
 
 /* Inicialização do servidor */
 app.listen(port, () => {
