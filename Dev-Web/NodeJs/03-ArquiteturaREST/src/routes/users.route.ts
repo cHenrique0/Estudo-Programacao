@@ -27,12 +27,29 @@ usersRoute.get(
   }
 );
 
-// POST user
+// POST user(create)
 usersRoute.post(
   "/users",
   (request: Request, response: Response, next: NextFunction) => {
     const newUser = request.body;
     response.status(StatusCodes.CREATED).send(newUser);
+  }
+);
+
+// PUT user(update)
+usersRoute.put(
+  "/users/:uuid",
+  (request: Request, response: Response, next: NextFunction) => {
+    const uuid = request.params.uuid;
+    response.status(StatusCodes.OK).send({ uuid });
+  }
+);
+
+// DELETE user
+usersRoute.delete(
+  "/users/:uuid",
+  (request: Request, response: Response, next: NextFunction) => {
+    response.sendStatus(StatusCodes.OK);
   }
 );
 
