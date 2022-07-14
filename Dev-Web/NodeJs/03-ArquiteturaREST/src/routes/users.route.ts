@@ -32,25 +32,30 @@ usersRoute.get(
 // POST user(create)
 usersRoute.post(
   "/users",
-  (request: Request, response: Response, next: NextFunction) => {
-    const newUser = request.body;
-    response.status(StatusCodes.CREATED).send(newUser);
+  async (request: Request, response: Response, next: NextFunction) => {
+    const newUserUuid = await userRepository.create(request.body);
+    response.status(StatusCodes.CREATED).send(newUserUuid);
   }
 );
 
 // PUT user(update)
 usersRoute.put(
   "/users/:uuid",
-  (request: Request, response: Response, next: NextFunction) => {
+  async (request: Request, response: Response, next: NextFunction) => {
     const uuid = request.params.uuid;
-    response.status(StatusCodes.OK).send({ uuid });
+    const user = request.body;
+    user.uuid = uuid;
+    await userRepository.update(user);
+    response.sendStatus(StatusCodes.OK);
   }
 );
 
 // DELETE user
 usersRoute.delete(
   "/users/:uuid",
-  (request: Request, response: Response, next: NextFunction) => {
+  async (request: Request, response: Response, next: NextFunction) => {
+    const uuid = request.params.uuid;
+    await userRepository.remove(uuid);
     response.sendStatus(StatusCodes.OK);
   }
 );
