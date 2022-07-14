@@ -2,6 +2,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 // importando constantes do status code
 import { StatusCodes } from "http-status-codes";
+import userRepository from "../repositories/user.repository";
 
 // Opcional: criar minha propria constante com o status code
 // const OK = StatusCodes.OK;
@@ -11,8 +12,8 @@ const usersRoute = Router();
 // GET all users
 usersRoute.get(
   "/users",
-  (request: Request, response: Response, next: NextFunction) => {
-    const users = [{ userName: "Teste" }];
+  async (request: Request, response: Response, next: NextFunction) => {
+    const users = await userRepository.findAllUsers();
     response.status(StatusCodes.OK).send(users);
   }
 );
@@ -20,10 +21,11 @@ usersRoute.get(
 // GET user by ID
 usersRoute.get(
   "/users/:uuid",
-  (request: Request, response: Response, next: NextFunction) => {
+  async (request: Request, response: Response, next: NextFunction) => {
     // pegando o id digitado na url do navegador
     const uuid = request.params.uuid;
-    response.status(StatusCodes.OK).send({ uuid });
+    const user = await userRepository.findUserById(uuid);
+    response.status(StatusCodes.OK).send(user);
   }
 );
 
