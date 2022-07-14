@@ -14,8 +14,8 @@ app.use(express.json()); // middleware para o express interpretar o content-type
 app.use(express.urlencoded({ extended: true }));
 
 /* Configurações de rotas */
-app.use(usersRoute); // rotas do usuário
 app.use(statusRoute); // rotas de status do servidor
+app.use(usersRoute); // rotas do usuário
 
 /* Inicialização do servidor */
 app.listen(port, () => {
