@@ -2,6 +2,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 // importando constantes do status code
 import { StatusCodes } from "http-status-codes";
+import DatabaseError from "../models/errors/database.erro.model";
 import userRepository from "../repositories/user.repository";
 
 // Opcional: criar minha propria constante com o status code
@@ -22,10 +23,18 @@ usersRoute.get(
 usersRoute.get(
   "/users/:uuid",
   async (request: Request, response: Response, next: NextFunction) => {
-    // pegando o id digitado na url do navegador
-    const uuid = request.params.uuid;
-    const user = await userRepository.findUserById(uuid);
-    response.status(StatusCodes.OK).send(user);
+    try {
+      // pegando o id digitado na url do navegador
+      const uuid = request.params.uuid;
+      const user = await userRepository.findUserById(uuid);
+      response.status(StatusCodes.OK).send(user);
+    } catch (error) {
+      if (error instanceof DatabaseError) {
+        response.sendStatus(StatusCodes.BAD_REQUEST);
+        return;
+      }
+      response.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR);
+    }
   }
 );
 
