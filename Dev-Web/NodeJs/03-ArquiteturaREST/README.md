@@ -25,3 +25,4 @@ Estudo sobre o desenvolvimento de uma API e integração com banco de dados.
 - Node.js
 - Express
 - Postgres
+- JWT - jsonwebtoken
