@@ -29,11 +29,7 @@ usersRoute.get(
       const user = await userRepository.findUserById(uuid);
       response.status(StatusCodes.OK).send(user);
     } catch (error) {
-      if (error instanceof DatabaseError) {
-        response.sendStatus(StatusCodes.BAD_REQUEST);
-        return;
-      }
-      response.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR);
+      next(error);
     }
   }
 );

@@ -3,6 +3,7 @@ import express from "express";
 // importando as rotas
 import usersRoute from "./routes/users.route";
 import statusRoute from "./routes/status.route";
+import erroHandler from "./middlewares/error-handdler.middleware";
 
 // criando uma instância do express
 const app = express();
@@ -16,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 /* Configurações de rotas */
 app.use(statusRoute); // rotas de status do servidor
 app.use(usersRoute); // rotas do usuário
+
+/* Configurações de middlewares */
+app.use(erroHandler); // tratamento de erros
 
 /* Inicialização do servidor */
 app.listen(port, () => {
