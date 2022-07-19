@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import JWT from "jsonwebtoken";
 import ForbiddenError from "../models/errors/forbidden.error.model";
 
-async function bearerAuthMiddleware(
+async function jwtAuthMiddleware(
   request: Request,
   response: Response,
   next: NextFunction
@@ -32,4 +32,4 @@ async function bearerAuthMiddleware(
   }
 }
 
-export default bearerAuthMiddleware;
+export default jwtAuthMiddleware;
