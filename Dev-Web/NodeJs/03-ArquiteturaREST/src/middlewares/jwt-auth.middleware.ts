@@ -18,15 +18,19 @@ async function jwtAuthMiddleware(
       throw new ForbiddenError("Tipo de autenticação ou token inválido");
     }
 
-    const tokenPayload = JWT.verify(token, "my_secret_key");
+    try {
+      const tokenPayload = JWT.verify(token, "my_secret_key");
 
-    if (typeof tokenPayload !== "object" || !tokenPayload.sub) {
+      if (typeof tokenPayload !== "object" || !tokenPayload.sub) {
+        throw new ForbiddenError("Token inválido!");
+      }
+
+      const user = { uuid: tokenPayload.sub, username: tokenPayload.username };
+      request.user = user;
+      next();
+    } catch (error) {
       throw new ForbiddenError("Token inválido!");
     }
-
-    const user = { uuid: tokenPayload.sub, username: tokenPayload.username };
-    request.user = user;
-    next();
   } catch (error) {
     next(error);
   }

@@ -18,8 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 
 /* Configurações de rotas */
 app.use(statusRoute); // rotas de status do servidor
-app.use(jwtAuthMiddleware, usersRoute); // rotas do usuário
 app.use(authRoute);
+/* O middleware é usado em todas as rotas que vem depois dele, as anteriores não o usam */
+app.use(jwtAuthMiddleware); // middleware para autenticação de usuário
+app.use(usersRoute); // rotas do usuário
 
 /* Configurações de middlewares */
 app.use(erroHandler); // tratamento de erros
