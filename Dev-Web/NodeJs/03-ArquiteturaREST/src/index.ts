@@ -5,6 +5,7 @@ import usersRoute from "./routes/users.route";
 import statusRoute from "./routes/status.route";
 import erroHandler from "./middlewares/error-handdler.middleware";
 import authRoute from "./routes/auth.route";
+import bearerAuthMiddleware from "./middlewares/bearer-auth.middleware";
 
 // criando uma instância do express
 const app = express();
@@ -17,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 /* Configurações de rotas */
 app.use(statusRoute); // rotas de status do servidor
-app.use(usersRoute); // rotas do usuário
+app.use(bearerAuthMiddleware, usersRoute); // rotas do usuário
 app.use(authRoute);
 
 /* Configurações de middlewares */
