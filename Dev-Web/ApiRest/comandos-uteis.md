@@ -9,9 +9,11 @@
 3. Talvez seja interessante usar TypeScript, para isso deve-se executar o comando `npm install -g typescript` para instalá-lo globalmente.
    - Após a instalação, executar `tsc --init` para acoplar o TypeScript ao projeto node
      - Verificar as configurações no arquivo `tsconfig.json` criado.
-   - `npm install typescript --save-dev`
-   - `npm install --save-dev @types/node`
-   - Criar um comando `build` no `package.json`: `"build": "tsc -p ."`
+   3.1 Podemos instalar o TypeScript apenas como dependênncia de desenvolvimento: 
+     - `npm install typescript --save-dev`
+     - `npm install --save-dev @types/node`
+     - Após a instalação executar o comando `npx tsc --init` 
+     - Criar um comando `build` no `package.json`: `"build": "tsc -p ."`
      - para executar o build: `npm run build`
 4. Criar uma pasta `src` com um arquivo `index.ts` na raiz do projeto
    - criar um comando `start` no `package.json`: `"start": "node ./"`
