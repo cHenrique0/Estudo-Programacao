@@ -1,6 +1,9 @@
 import db from "../database/db";
 import DatabaseError from "../models/errors/database.erro.model";
 import User from "../models/user.model";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 class UserRepository {
   async findAllUsers(): Promise<User[]> {
@@ -42,7 +45,7 @@ class UserRepository {
       WHERE username = $1
       AND password = crypt($2, $3)
     `;
-      const where = [username, password, "chva81425078"];
+      const where = [username, password, process.env.CRYPT];
       const {
         rows: [user],
       } = await db.query<User>(select, where);
@@ -61,7 +64,7 @@ class UserRepository {
       VALUES ($1, crypt($2, $3))
       RETURNING uuid
     `;
-    const values = [user.username, user.password, "chva81425078"];
+    const values = [user.username, user.password, process.env.CRYPT];
 
     const {
       rows: [newUser],
@@ -79,7 +82,7 @@ class UserRepository {
       WHERE uuid = $4
       RETURNING uuid
     `;
-    const values = [user.username, user.password, "chva81425078", user.uuid];
+    const values = [user.username, user.password, process.env.CRYPT, user.uuid];
     await db.query(update, values);
   }
 

@@ -2,7 +2,6 @@
 import { Router, Request, Response, NextFunction } from "express";
 // importando constantes do status code
 import { StatusCodes } from "http-status-codes";
-import DatabaseError from "../models/errors/database.erro.model";
 import userRepository from "../repositories/user.repository";
 
 // Opcional: criar minha propria constante com o status code

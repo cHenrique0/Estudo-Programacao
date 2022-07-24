@@ -18,7 +18,7 @@ authRoute.post(
       }
       const jwtPayload = { username: user.username };
       const jwtOptions = { subject: user?.uuid };
-      const secretKey = "my_secret_key";
+      const secretKey = <string>process.env.JWT_SECRET_KEY;
       const jwt = JWT.sign(jwtPayload, secretKey, jwtOptions);
       response.status(StatusCodes.OK).json({ token: jwt });
     } catch (error) {
