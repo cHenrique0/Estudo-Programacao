@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(testRouter);
+app.use(dogRouter);
 
 app.listen(port, () => {
   console.log(`Application running on port: ${port}`);
